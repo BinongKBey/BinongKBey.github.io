@@ -1,0 +1,140 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+/*Skills Start*/
+
+.text{
+    font-family: 'Inconsolata', monospace;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    animation: appear 1s ease;
+    animation-fill-mode: forwards;
+}
+.Skills{
+    margin-top: 10vh;
+    background: #011d44;
+    position: absolute;
+    min-height: 90vh;
+    width: 100%;
+}
+.skillList{
+    width: 80%;
+    margin: 40px auto 20px auto;
+    list-style-type: none;
+    padding: 0; 
+}
+.skillList li{
+    padding: 20px;
+    background: #1a3356;
+    margin-bottom: 18px;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    border-radius: 20px;
+}
+
+/*Skill Items*/
+
+.skillItem{
+    font-family: 'Inconsolata', monospace;
+    font-size: 24px;
+    margin: 0;
+    padding-left: 20px;
+    animation: leftright 1s ease;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+/*All the Stars*/
+.stars1{
+    margin: 0 60px 0 20px;
+    animation: drop 1s ease 1s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+.stars2{
+    margin: 0 60px 0 20px;
+    animation: drop 1s ease 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+.stars3{
+    margin: 0 60px 0 20px;
+    animation: drop 1s ease 3s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+.stars4{
+    margin: 0 60px 0 20px;
+    animation: drop 1s ease 4s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+.stars5{
+    margin: 0 60px 0 20px;
+    animation: drop 1s ease 5s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes leftright{
+    0%{
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    75%{
+        opacity: 0.75;
+        transform: translateX(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/*Skill End*/
+@keyframes drop{
+    0%{
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes appear{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width:910px){
+    .stars1,.stars2,.stars3,.stars4,.stars5{
+        margin: 0 10px 0 20px;
+    }
+    .skillList li{
+        padding: 10px;
+    }
+}
+@media screen and (max-width:650px){
+    .stars1,.stars2,.stars3,.stars4,.stars5{
+        margin: 0;
+    }
+    .skillList li{
+        padding: 10px 6px 10px 6px;
+    }
+    .skillList{
+        width: 90%;
+    }
+    .skillItem{
+        padding: 0;
+        font-size: 20px;
+    }
+}

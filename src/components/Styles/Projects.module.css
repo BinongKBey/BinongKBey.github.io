@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+.text{
+    font-family: 'Inconsolata', monospace;
+    font-size: 40px;
+    text-align: center;
+    animation: appear 1s ease;
+}
+.container{
+    margin-top: 10vh;
+    background: #011d44;
+    position: absolute;
+    min-height: 90vh;
+    color: white;
+    opacity: 500;
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+.btn{
+    border: 2px solid white;
+    border-radius: 8px;
+    background: #011d44;
+    padding: 10px 15px 10px 15px;
+    color: white;
+    width: 60%;
+    display: block;
+    margin: 10px auto 10px auto;
+    font-family: 'Inconsolata', monospace;
+}
+.btn a{
+    color: white;
+    width: 100%;
+    text-decoration: none; 
+    font-size: 18px;
+}
+
+/*Items Start*/
+
+.list{
+    margin: 20px auto 20px auto;
+    display: flex;
+    padding: 2em;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.item{
+    margin: 0px 10px 20px 10px;
+    width: 20rem;
+    border-radius: 20px;
+    background: #001a3d;
+    display: block;
+    overflow: hidden;
+    border: rgba(255, 255, 255, 0.582) 2px solid;
+    animation: drop 1s ease 1s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+.item img{
+    width: 100%;
+}
+.itembody{
+    padding: 0.5em 1em 1em 1em;
+    text-align: center;
+}
+.itembody p{
+    margin: 0;
+}
+
+/*Items End*/
+@keyframes drop{
+    0%{
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes appear{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width:910px){
+    .stars1,.stars2,.stars3,.stars4,.stars5{
+        margin: 0 10px 0 20px;
+    }
+    .skillList li{
+        padding: 10px;
+    }
+}
